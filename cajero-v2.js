@@ -42,4 +42,13 @@ function atenderOperacion(){
 }
 
 
-atenderOperacion();
+let activo = true;
+
+while (activo) {
+    atenderOperacion();
+
+    const respuesta = prompt("¿Quieres realizar otra operación? (s/n): ")
+        .trim()
+        .toLowerCase();
+    activo = respuesta === "s";
+}
